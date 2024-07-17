@@ -1,6 +1,6 @@
 import mongoose, {Mongoose} from "mongoose";
 
-const MONGODB_URL = process.env.MONGODB_URL
+const MONGODB_URL = encodeURIComponent(process.env.MONGODB_URL!)
 
 interface MongooseConnection {
     conn: Mongoose | null;
@@ -10,12 +10,14 @@ interface MongooseConnection {
 let cached: MongooseConnection = (global as any).mongoose
 
 if(!cached) {
+    console.log("cached fallback")
     cached = (global as any).mongoose = {
         conn: null, promise: null
     }
 }
 
 export const connectToDatabase = async () => {
+    console.log("connected to db")
     if(cached.conn) return cached.conn;
 
     if(!MONGODB_URL) throw new Error("Missing MONGODB_URL");
