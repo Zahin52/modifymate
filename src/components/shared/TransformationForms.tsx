@@ -112,7 +112,7 @@ function TransformationForms({
     return onChangeField(value);
   };
 
-  //TODO: Return to update credit fee to something else
+  //TODO: Return to update credit fee to some other value
   const onTransformHandler = async () => {
     setIsTransforming(true);
 
