@@ -84,11 +84,11 @@ const getImageById = async (imageId: string) => {
 };
 
 // GET IMAGES
-export async function getAllImages({ limit = 9, page = 1, searchQuery = '' }: {
+const  getAllImages = async ({ limit = 9, page = 1, searchQuery = '' }: {
   limit?: number;
   page: number;
   searchQuery?: string;
-}) {
+}) => {
   try {
     await connectToDatabase();
 
@@ -142,7 +142,7 @@ export async function getAllImages({ limit = 9, page = 1, searchQuery = '' }: {
 }
 
 // GET IMAGES BY USER
-export async function getUserImages({
+const getUserImages = async ({
   limit = 9,
   page = 1,
   userId,
@@ -150,7 +150,7 @@ export async function getUserImages({
   limit?: number;
   page: number;
   userId: string;
-}) {
+}) => {
   try {
     await connectToDatabase();
 
@@ -172,4 +172,4 @@ export async function getUserImages({
   }
 }
 
-export { addImage, updateImage, deleteImage, getImageById };
+export { addImage, updateImage, deleteImage, getImageById, getAllImages, getUserImages };
