@@ -120,7 +120,7 @@ function TransformationForms({
             userId,
             path: "/",
           });
-          console.log("SecureImageCheck", newImage);
+          
           if (newImage) {
             form.reset();
             setImage(data);
@@ -155,7 +155,7 @@ function TransformationForms({
     const imageSize = aspectRatioOptions[value as AspectRatioKey];
     setImage((prevState: any) => ({
       ...prevState,
-      aspectRation: imageSize.aspectRatio,
+      aspectRatio: imageSize.aspectRatio,
       width: imageSize.width,
       height: imageSize.height,
     }));
@@ -177,7 +177,8 @@ function TransformationForms({
           [fieldName === "prompt" ? "prompt" : "to"]: value,
         },
       }));
-    }, 1000);
+    }, 2000)();
+
     return onChangeField(value);
   };
 
@@ -223,6 +224,7 @@ function TransformationForms({
                 onValueChange={(value) => {
                   onSelectFieldHandler(value, field.onChange);
                 }}
+                value={field.value}
               >
                 <SelectTrigger className="select-field">
                   <SelectValue placeholder="Select size" />
@@ -253,7 +255,7 @@ function TransformationForms({
                   className="input-field"
                   onChange={(e) =>
                     onInputChangeHandler(
-                      "promt",
+                      "prompt",
                       e.target.value,
                       type,
                       field.onChange
@@ -270,7 +272,7 @@ function TransformationForms({
             control={form.control}
             formLabel="Replacement Color"
             className="w-full"
-            name={"color"}
+            name="color"
             render={({ field }) => (
               <Input
                 value={field.value}
