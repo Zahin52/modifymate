@@ -13,7 +13,7 @@ function MobileNav() {
     <header className="header">
       <Link href={"/"} className="flex items-center gap-2 md:py-2">
         <Image
-          src="/assets/images/logo-text.svg"
+          src="/assets/images/logo-text.png"
           alt="logo"
           width={180}
           height={28}
@@ -35,7 +35,7 @@ function MobileNav() {
             <SheetContent className="shee-content sm:w-64">
               <>
                 <Image
-                  src={"/assets/images/logo-text.svg"}
+                  src={"/assets/images/logo-text.png"}
                   alt="logo"
                   width={152}
                   height={23}
