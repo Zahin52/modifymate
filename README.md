@@ -60,7 +60,7 @@ Welcome to **ModifyMate** – your ultimate AI-powered image editing companion. 
 
 and many more, including code architecture and reusability
 
-### ⚙️ Tech Stack
+## Tech Stack
 
 - Next.js
 - TypeScript
