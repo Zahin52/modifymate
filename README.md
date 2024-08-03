@@ -146,8 +146,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 ## Contact
 
-Md Zahin Uddin\n
-Software Engineer\n
-Samsung Research & Development Institute Bangladesh\n
-E-mail: zahinuddin5@gmail.com\n
+Md Zahin Uddin \
+Software Engineer \
+Samsung Research & Development Institute Bangladesh \
+E-mail: zahinuddin5@gmail.com \
 LinkedIn: [https://www.linkedin.com/in/zahinuddin/](https://www.linkedin.com/in/zahinuddin/)
